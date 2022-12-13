@@ -1,0 +1,15 @@
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\bin\Debug\net6.0\Warehouse.exe
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\bin\Debug\net6.0\Warehouse.deps.json
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\bin\Debug\net6.0\Warehouse.runtimeconfig.json
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\bin\Debug\net6.0\Warehouse.dll
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\bin\Debug\net6.0\Warehouse.pdb
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\Warehouse.csproj.AssemblyReference.cache
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\Warehouse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\Warehouse.AssemblyInfoInputs.cache
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\Warehouse.AssemblyInfo.cs
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\Warehouse.csproj.CoreCompileInputs.cache
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\Warehouse.dll
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\refint\Warehouse.dll
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\Warehouse.pdb
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\Warehouse.genruntimeconfig.cache
+C:\Users\Mr.Danch0 Hristovich\Desktop\Werehouse\Warehouse\Warehouse\obj\Debug\net6.0\ref\Warehouse.dll
