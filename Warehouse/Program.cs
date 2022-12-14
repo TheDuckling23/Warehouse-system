@@ -22,7 +22,9 @@
                 Console.WriteLine("6. Print");
                 Console.WriteLine("7. Add Product");
                 Console.WriteLine("8. Remove Product");
-                Console.WriteLine("9. Exit");
+                Console.WriteLine("9. Log");
+                Console.WriteLine("10. Clean");
+                Console.WriteLine("11. Exit");
 
                 userInput = Console.ReadLine();
 
@@ -186,9 +188,80 @@
                             Console.WriteLine("You should first open a file.");
                         break;
 
-                        
+                    //case "8": //remove
+                       // if (fileOpen)
 
-                    case "9":
+
+                    case "9": //log
+                        if (fileOpen)
+                        {
+                            Console.WriteLine("Enter the starting date (yyyy-mm-dd):");
+                            string fromDate = Console.ReadLine();
+
+                            Console.WriteLine("Enter the ending date (yyyy-mm-dd):");
+                            string toDate = Console.ReadLine();
+
+                            List<string> logEntries = new List<string>();
+                            foreach (string entry in warehouseStock)
+                            {
+                                string[] entryParts = entry.Split(',');
+                                DateTime entryDate = DateTime.Parse(entryParts[0]);
+                                DateTime from = DateTime.Parse(fromDate);
+                                DateTime to = DateTime.Parse(toDate);
+                                if (entryDate >= from && entryDate <= to)
+                                {
+                                    logEntries.Add(entry);
+                                }
+                            }
+
+                            Console.WriteLine("Stock changes in the period from {0} to {1}:", fromDate, toDate);
+                            foreach (string entry in logEntries)
+                            {
+                                Console.WriteLine(entry);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: No file is open");
+                        }
+                        break;
+
+
+                    case "10": //clean function
+                        if (fileOpen)
+                        {
+                            List<string> expiredGoods = new List<string>();
+                            List<string> nonExpiredGoods = new List<string>();
+
+                            foreach (string entry in warehouseStock)
+                            {
+                                string[] entryParts = entry.Split(',');
+                                DateTime expiryDate = DateTime.Parse(entryParts[1]);
+                                if (expiryDate <= DateTime.Now || expiryDate <= DateTime.Now.AddDays(5))
+                                {
+                                    expiredGoods.Add(entry);
+                                }
+                                else
+                                {
+                                    nonExpiredGoods.Add(entry);
+                                }
+                            }
+
+                            warehouseStock = nonExpiredGoods;
+
+                            Console.WriteLine("Cleared the following expired or soon-to-expire goods from the warehouse:");
+                            foreach (string entry in expiredGoods)
+                            {
+                                Console.WriteLine(entry);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: No file is open");
+                        }
+                        break;
+
+                    case "11":
                         Console.WriteLine("Exiting the Warehouse Information System. Goodbye!");
                         System.Environment.Exit(0);
                         break;
