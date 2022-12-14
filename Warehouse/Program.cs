@@ -188,8 +188,52 @@
                             Console.WriteLine("You should first open a file.");
                         break;
 
-                    //case "8": //remove
-                       // if (fileOpen)
+                    case "8":
+                        if (!fileOpen)
+                        {
+                            Console.WriteLine("Error: No file is open");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Enter product name: ");
+                            string productName = Console.ReadLine();
+                            Console.WriteLine("Enter quantity to remove: ");
+                            int quantity = int.Parse(Console.ReadLine());
+
+                            // Remove product from warehouse
+                            bool productFound = false;
+                            for (int i = 0; i < warehouseStock.Count; i++)
+                            {
+                                string[] productInfo = warehouseStock[i].Split(',');
+                                if (productInfo[0] == productName)
+                                {
+                                    productFound = true;
+                                    int productQuantity = int.Parse(productInfo[1]);
+                                    if (productQuantity < quantity)
+                                    {
+                                        Console.WriteLine("Error: Not enough of the product is available in the warehouse");
+                                        Console.WriteLine("Available quantity: " + productQuantity);
+                                        Console.WriteLine("Expiration date: " + productInfo[2]);
+                                        Console.WriteLine("Do you want to remove the available quantity? (y/n)");
+                                        string uInput = Console.ReadLine();
+                                        if (uInput == "y")
+                                        {
+                                            quantity = productQuantity;
+                                        }
+                                        else
+                                        {
+                                            // User chose not to remove available quantity
+                                            continue;
+                                        }
+                                    }
+                                    productInfo[1] = (productQuantity - quantity).ToString();
+                                    warehouseStock[i] = string.Join(",", productInfo);
+                                    Console.WriteLine(quantity + " of product " + productName + " removed from location: " + productInfo[3]);
+                                }
+                            }
+                        }
+                        break;
+
 
 
                     case "9": //log
@@ -205,7 +249,7 @@
                             foreach (string entry in warehouseStock)
                             {
                                 string[] entryParts = entry.Split(',');
-                                DateTime entryDate = DateTime.Parse(entryParts[0]);
+                                DateTime entryDate = DateTime.Parse(entryParts[2]);
                                 DateTime from = DateTime.Parse(fromDate);
                                 DateTime to = DateTime.Parse(toDate);
                                 if (entryDate >= from && entryDate <= to)

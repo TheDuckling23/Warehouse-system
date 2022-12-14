@@ -2,9 +2,8 @@ Socks,2023-8-23,2022-11-21,SocksUnity,200kg,2000
 Cars,2024-5-16,2022-11-21,ToysUnity,56kg,123
 Toys,2025-9-19,2022-11-21,ToysUnity,73kg,231
 T-shirts,2026-12-21,2022-11-21,T-shirtUnity,11kg,34
-Carrots,2022-2-29,2022-11-21,FodUnity,94kg,486
 Disks,2030-1-30,2022-11-21,PcUnity,30kg,500
 Trains,2024-10-15,2022-11-21,ToysUnity,48kg,163
+Carrots,2022-2-27,2022-11-21,FodUnity,94kg,486
 Pizzas,2022-2-03,2022-11-21,FoodUnity,71g,334
 Cookies,2022-6-11,2022-11-21,SweetUnity,568kg,6347
-
