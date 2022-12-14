@@ -21,7 +21,8 @@
                 Console.WriteLine("5. Help");
                 Console.WriteLine("6. Print");
                 Console.WriteLine("7. Add Product");
-                Console.WriteLine("8. Exit");
+                Console.WriteLine("8. Remove Product");
+                Console.WriteLine("9. Exit");
 
                 userInput = Console.ReadLine();
 
@@ -180,16 +181,14 @@
                             {
                                 warehouseStock.Add(newProduct);
                             }
-
-
-
-
                         }
                         else
                             Console.WriteLine("You should first open a file.");
                         break;
 
-                    case "8":
+                        
+
+                    case "9":
                         Console.WriteLine("Exiting the Warehouse Information System. Goodbye!");
                         System.Environment.Exit(0);
                         break;
